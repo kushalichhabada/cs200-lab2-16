@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+<zoom_level>10</zoom_level>
+
+<element>
+<id>UMLSequenceAllInOne</id>
+<coordinates>
+<x>30</x>
+<y>65</y>
+<w>1160</w>
+<h>690</h>
+</coordinates>
+<panel_attributes>title=Bill ChocAn - Sequence Diagram
+obj=Provider~provider|Provider Terminal~terminal|ChocAn System~system|Member Records~members|Provider Directory~directory|Service Records~records
+provider->>>terminal:provider,terminal:Select Bill ChocAn
+terminal->>>system:terminal,system:Enter member number
+system->>>members:system,members:Find member number
+members->>>system:members,system:Return member + status
+system->>>terminal:system,terminal:Display "Validated"
+terminal->>>provider:terminal,provider:Show Validated
+provider->>>terminal:provider,terminal:Enter date of service
+terminal->>>system:terminal,system:Submit service date
+provider->>>terminal:provider,terminal:Enter service code
+terminal->>>system:terminal,system:Verify service code
+system->>>directory:system,directory:Look up service code
+directory->>>system:directory,system:Return service name
+system->>>terminal:system,terminal:Display service name
+terminal->>>provider:terminal,provider:Ask provider to confirm
+provider->>>terminal:provider,terminal:Confirm service
+provider->>>terminal:provider,terminal:Decline comments
+terminal->>>system:terminal,system:Save service record
+system->>>records:system,records:Create service record
+records->>>system:records,system:Record saved
+system->>>directory:system,directory:Get fee for service
+directory->>>system:directory,system:Return service fee
+system->>>terminal:system,terminal:Display fee
+terminal->>>provider:terminal,provider:Record details on verification form
+system->>>terminal:system,terminal:Return to provider menu
+</panel_attributes>
+<additional_attributes/>
+</element>
+
+<element>
+<id>Text</id>
+<coordinates>
+<x>45</x>
+<y>20</y>
+<w>700</w>
+<h>35</h>
+</coordinates>
+<panel_attributes>**CS 200 - Lab 5**
+Use Case 2: **Bill ChocAn**
+Team 16</panel_attributes>
+<additional_attributes/>
+</element>
+
+<element>
+<id>Text</id>
+<coordinates>
+<x>760</x>
+<y>20</y>
+<w>400</w>
+<h>35</h>
+</coordinates>
+<panel_attributes>**Main success scenario**
+Provider is already logged in.</panel_attributes>
+<additional_attributes/>
+</element>
+
+<element>
+<id>Text</id>
+<coordinates>
+<x>45</x>
+<y>765</y>
+<w>1115</w>
+<h>35</h>
+</coordinates>
+<panel_attributes>Note: Validate Member and Verify Service Code are included in Bill ChocAn. Enter Service Comments is optional.</panel_attributes>
+<additional_attributes/>
+</element>
+</diagram>
