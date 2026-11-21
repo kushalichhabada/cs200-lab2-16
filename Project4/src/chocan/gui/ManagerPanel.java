@@ -54,16 +54,23 @@ class ManagerPanel extends JPanel {
         JButton generate = new JButton("Generate report");
         JLabel numberLabel = new JLabel("Member / provider number:");
 
-        JPanel top = new JPanel(new FlowLayout(FlowLayout.LEFT));
-        top.add(new JLabel("Report:"));
-        top.add(type);
-        top.add(numberLabel);
-        top.add(number);
-        top.add(new JLabel("From:"));
-        top.add(from);
-        top.add(new JLabel("To:"));
-        top.add(to);
-        top.add(generate);
+        JPanel top = new JPanel(new java.awt.GridLayout(2, 1));
+
+        JPanel firstRow = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        JPanel secondRow = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        firstRow.add(new JLabel("Report:"));
+        firstRow.add(type);
+        firstRow.add(numberLabel);
+        firstRow.add(number);
+
+        secondRow.add(new JLabel("From:"));
+        secondRow.add(from);
+        secondRow.add(new JLabel("To:"));
+        secondRow.add(to);
+        secondRow.add(generate);
+
+        top.add(firstRow);
+        top.add(secondRow);
 
         // The number only matters for member and provider reports.
         type.addActionListener(e -> {
